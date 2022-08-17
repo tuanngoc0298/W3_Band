@@ -1,0 +1,95 @@
+/* PC */
+@media (min-width: 1024px) {
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+}
+
+/* Tablet and mobile */
+@media (max-width: 1023px) {
+    .btn {
+        padding: 14px 16px;
+    }
+
+    #nav .subnav a {
+        padding: 5px 12px;
+    }
+    .form-control {
+        padding: 15px;
+    }
+
+    .social-list a {
+        margin: 0 8px;
+    }
+
+    #footer .copyright a {
+        padding: 12px 0;
+        display: inline-block;
+    }
+    .contact-info {
+        line-height: 2;
+    }
+
+    .contact-form {
+        margin-top: 32px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 740px) {
+    .s-full-width {
+        width: 100% !important;
+    }
+
+    .s-col-full {
+        width: 100% !important;
+    }
+
+    #header {
+        /* Nếu con của thẻ cha có kích thước lớn hơn thẻ cha thì ta ẩn những phần thừa ra, visible là hiện lên, là thuộc tính mặc định của overflow*/
+        overflow: hidden;
+    }
+    #header #nav > li:first-child {
+        display: inline-block;
+    }
+
+    #header .mobile-menu-btn {
+        display: block;
+    }
+
+    #header .search-btn {
+        display: none;
+    }
+
+    #nav {
+        display: block;
+    }
+
+    #nav > li {
+        display: block;
+    }
+
+    #nav .subnav {
+        position: initial;
+        background-color: #333;
+    }
+
+    #nav .subnav a {
+        color: #fff;
+        padding: 5px 41px;
+    }
+
+    .ct-name-email,
+    .contact-content,
+    .places-list,
+    .content-section .member-list {
+        flex-flow: column;
+    }
+
+    .places-mobile,
+    #content .member-item-mobile {
+        width: 100%;
+        margin-top: 30px;
+    }
+}

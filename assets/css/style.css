@@ -1,0 +1,543 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* common */
+.clear {
+    clear: both;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.mt-8 {
+    margin-top: 8px;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+.row {
+    display: flex;
+    margin: 0 -8px;
+}
+
+.col {
+    padding: 0 8px;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-two {
+    width: 50%;
+}
+
+.col-third {
+    width: calc(100% / 3);
+}
+
+.pull-righ {
+    float: right;
+}
+.btn {
+    display: inline-block;
+    line-height: 1.6;
+    font-size: 15px;
+    border: none;
+    text-decoration: none;
+    color: white;
+    background-color: #000;
+    padding: 8px 16px;
+    margin-top: 15px;
+}
+/* 
+1. Vi tri
+2. Kich thuoc
+3. Mau sac
+4. Kieu dang (Kieu chu, hinh tron, ...)  */
+#main {
+}
+
+#header {
+    height: 46px;
+    background-color: #000;
+    /* Khi có thuộc tính position thì tính chất kế thừa chiều ngang của thuộc tính display: block sẽ biến mất do nó sẽ nổi lên trên các khối khác*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav,
+.subnav {
+    list-style-type: none;
+}
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav > li > a {
+    color: white;
+    text-transform: uppercase;
+}
+
+#nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav > li:hover > a,
+#nav .subnav li:hover a {
+    background-color: #ccc;
+    color: #000;
+}
+
+#nav .subnav {
+    display: none;
+    min-width: 160px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav a {
+    color: black;
+    padding: 0 16px;
+    line-height: 38px;
+}
+
+/* Tạo icon search,down */
+#nav .nav-arrow-down {
+    font-size: 14px;
+}
+
+#header .mobile-menu-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+}
+#header .mobile-menu-btn,
+#header .search-btn {
+    float: right;
+    padding: 0 24px;
+}
+
+#header .search-btn:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+    color: #000;
+}
+
+#header .menu-icon,
+#header .search-icon {
+    color: white;
+    font-size: 20px;
+    line-height: 46px;
+}
+
+/* Slider */
+#slider {
+    /* padding value %: Chỉ định khoảng cách vùng đệm phía 
+    trên của phần tử dựa theo tỷ lệ phần trăm chiều rộng 
+    phần nội dung của phần tử chứa nó. */
+    padding-top: 50%;
+    margin-top: 46px;
+    background: url("/LearnAgainHTML/W3_Band/assets/img/slider/silder1.jpg") top center / cover no-repeat;
+    position: relative;
+}
+/*  */
+.text-content {
+    position: absolute;
+    /* Cach can giua 1 khoi */
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    /* Cach 2 dung width:100% + text-align:center */
+    /* width: 100%; */
+    text-align: center;
+    color: white;
+    padding: 16px 32px;
+}
+
+.text-heading {
+    font-weight: 400;
+    padding: 10px 0;
+    font-size: 24px;
+}
+
+.text-description {
+    padding: 15px 0;
+    font-size: 15px;
+}
+/*  */
+#content {
+}
+
+#content .content-section {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px;
+    width: 800px;
+    max-width: 100%;
+}
+
+#content .content-section .section-heading {
+    margin: 10px 0;
+    text-align: center;
+    /* Khoảng cách giữa các chữ */
+    letter-spacing: 4px;
+    font-weight: 400;
+    font-size: 30px;
+    /* Viết hoa */
+    text-transform: uppercase;
+}
+
+#content .content-section .section-sub-heading {
+    text-align: center;
+    margin: 15px 0;
+    /* Chữ in nghiêng */
+    font-style: italic;
+    /* Làm mờ chữ */
+    opacity: 0.6;
+}
+
+#content .content-section .about-text {
+    text-align: justify;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.content-section .member-list {
+    padding: 32px 0;
+}
+
+/* .content-section .member-item {
+    Không dùng float vì khi dg float thì những thằng dùng float sẽ bị nhấc ra mặt phẳng khác dẫn đến việc thằng cha bên ngoài không phủ những thằng con đó, nếu dùng thì phải thêm thuộc tính overflow: hidden;
+    float: left: ;
+    text-align: center;
+} */
+
+.content-section .member-name {
+    margin: 15px 0;
+}
+
+.content-section .member-list .member-img {
+    width: 60%;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+/* Tour-section */
+.tour-section {
+    background-color: #000;
+}
+
+.tour-section .tickets-list {
+    background-color: white;
+}
+
+.tour-section .tickets-list li {
+    list-style-type: none;
+    color: #757575;
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+    line-height: 1.5;
+}
+
+.tour-section .tickets-list .sold-out {
+    display: inline-block;
+    margin-left: 15px;
+    padding: 0 8px;
+    color: white;
+    background-color: red;
+}
+
+.tour-section .tickets-list .quantity {
+    background-color: #000;
+    color: white;
+    /* Sẽ di chuyển khối đó trong thẻ cha, và biến khối đó thành thẻ block, khi đó có thể sử dụng margin âm để căn chỉnh */
+    float: right;
+    padding: 0 8px;
+    margin-right: 16px;
+    border-radius: 50%;
+}
+
+/* Places */
+
+.places-list {
+    padding: 32px 0;
+}
+
+/* .place-item {
+    Khi dùng inline-block thẻ cha sẽ thu vào vừa với kích thước phần nội dung lớn nhất mà nó chứa
+    display: inline-block;
+    Dùng float thì phần tử cha sẽ không bao trọn phần tử con mà phải thêm class clear ở dưới cùng phần tử lỗi
+    float: left;
+    width: calc(100% / 3);
+    margin-bottom: 16px;
+} */
+
+.place-body {
+    background-color: white;
+    padding: 16px;
+    font-size: 15px;
+}
+
+.place-img {
+    /* Do mặc định thẻ img có tính chất inline  */
+    display: block;
+    width: 100%;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+.place-heading {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.place-time {
+    padding-top: 15px;
+}
+
+.place-desc {
+    padding-top: 15px;
+    line-height: 1.4;
+}
+
+.btn:hover {
+    background-color: #ccc;
+    color: black;
+    cursor: pointer;
+}
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal .modal-container {
+    position: relative;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    background-color: white;
+    animation: modalFateIn ease 0.5s;
+}
+.modal .modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px;
+    color: white;
+}
+
+.modal .modal-close:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+.modal .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 130px;
+    background-color: #009688;
+    color: white;
+    padding: 32px 16px;
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+
+.modal .modal-heading-icon {
+    margin-right: 16px;
+}
+.modal .modal-body {
+    padding: 0 16px;
+}
+
+.modal .modal-label {
+    display: block;
+    margin: 15px 0;
+}
+.modal .modal-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.modal #buy-tickets {
+    width: 100%;
+    margin: 16px 0;
+    padding: 16px;
+    background-color: #009688;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+}
+
+.modal .modal-footer {
+    margin: 15px 0;
+    float: right;
+}
+
+.modal .modal-sub-close {
+    display: inline-block;
+    margin: 16px 0;
+    padding: 8px 16px;
+    background-color: red;
+    color: white;
+}
+
+.modal #buy-tickets:hover,
+.modal .modal-sub-close:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+/* CONTACT-FORM */
+.contact-content {
+    padding: 32px 0;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-info i[class*="ti-"] {
+    display: inline-block;
+    width: 30px;
+}
+
+.contact-info a {
+    opacity: 0.7;
+}
+
+.contact-info a:hover {
+    opacity: 1;
+}
+.contact-form {
+    font-size: 15px;
+}
+
+.form-control {
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.form-submit {
+    padding: 8px 16px;
+    background-color: #000;
+    color: white;
+    font-size: 15px;
+    border: none;
+    /* Chu y khi dùng float khối đó sẽ nổi lên trên và được coi là 1 khối block, thẻ cha sẽ không bao phủ nó nữa và phải thêm lớp clear để khắc phục */
+    float: right;
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.map-section img {
+    width: 100%;
+}
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .social-list a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .social-list {
+    font-size: 24px;
+}
+
+.copyright a:hover,
+#footer .social-list a:hover {
+    color: rgba(0, 0, 0, 0.4);
+}
+.copyright {
+    font-size: 15px;
+    margin: 15px 0;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.copyright a {
+    color: rgba(0, 0, 0, 0.6);
+}
+@keyframes modalFateIn {
+    from {
+        transform: translateY(-140px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
